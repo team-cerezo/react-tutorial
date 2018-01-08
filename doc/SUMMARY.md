@@ -7,5 +7,6 @@
 * [コンポーネントを分割する](separate-component.md)
 * [ファイルも分割する](separate-file.md)
 * [fluxを使う](flux.md)
+* [REST API](rest-api.md)
 * [チートシート](cheat-sheet.md)
 
