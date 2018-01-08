@@ -13,7 +13,7 @@ Reactから`create-react-app`というコマンドが提供されており、こ
 また、`create-react-app`で作られたプロジェクトはyarnを使うのでyarnもインストールする。
 
 あっ、npmは企業ネットワークなどプロキシがある環境だとプロキシを越える設定をしなくてはならない。
-[proxy環境下でのnpm config設定](https://qiita.com/tenten0213/items/7ca15ce8b54acc3b5719)を参考にして設定する。
+[proxy環境下でのnpm config設定](https://qiita.com/tenten0213/items/7ca15ce8b54acc3b5719)を参考にして設定するとよい。
 もしくは環境変数`http_proxy`と`https_proxy`にプロキシのURIを設定してもよい（私はそうしている）。
 
 `create-react-app`は`npm install`でインストールする。
@@ -33,9 +33,16 @@ create-react-app
 npm install -g create-react-app
 ```
 
-## Chrome拡張
+## Chrome
 
 このチュートリアルではChromeで画面を確認しながら開発することを想定している。
+
+もしChromeがインストールされていなければインストールすること。
+
+* https://www.google.co.jp/chrome/browser/desktop/index.html
+
+## Chrome拡張
+
 Reactアプリケーション開発のサポートをしてくれるChrome拡張があるのでインストールするとよい。
 
 React Developer Tools

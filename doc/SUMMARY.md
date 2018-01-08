@@ -2,6 +2,7 @@
 
 * [環境構築](setup.md)
 * [チュートリアルで作るもの](what-create.md)
+* [プロジェクトを作る](create-project.md)
 * [とりあえずざくっと書いてみる](coding-roughly.md)
 * [コンポーネントを分割する](separate-component.md)
 * [ファイルも分割する](separate-file.md)
