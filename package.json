@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "textlint": "textlint doc"
+  },
+  "devDependencies": {
+    "textlint": "^10.1.1",
+    "textlint-rule-preset-ja-technical-writing": "^2.0.0",
+    "textlint-rule-prh": "^5.0.1"
+  }
+}
