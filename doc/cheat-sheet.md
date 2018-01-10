@@ -66,6 +66,30 @@ ctrl + shift + O
 ctrl + T
 ```
 
+### 複数のファイルの中身を検索する
+
+```
+ctrl + shift + F
+```
+
+### ターミナルを開く・閉じる
+
+```
+ctrl + @
+```
+
+### コマンドを実行する
+
+```
+ctrl + shift + P
+```
+
+### Markdownをプレビューする
+
+```
+ctrl + shift + v
+```
+
 ## Git
 
 ### 検索する
@@ -105,4 +129,3 @@ git grep -e foo --or -e bar
 ```console
 git ls-files
 ```
-
