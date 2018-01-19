@@ -4,6 +4,7 @@
 * [JavaScript(ES2015)](es2015.md)
 * [チュートリアルで作るもの](what-create.md)
 * [プロジェクトを作る](create-project.md)
+* [Hello, world!](helloworld.md)
 * [とりあえずざくっと書いてみる](coding-roughly.md)
 * [コンポーネントを分割する](separate-component.md)
 * [ファイルも分割する](separate-file.md)

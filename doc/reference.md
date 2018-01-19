@@ -28,5 +28,6 @@
 * [constructor](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Classes/constructor)
 * [メソッド定義](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Method_definitions)
 * [static](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Classes/static)
+* [import](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)
 * [スプレッド演算子](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 * [Fetch API](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API)
