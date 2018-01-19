@@ -28,8 +28,8 @@ Reactから`create-react-app`というコマンドが提供されており、こ
 [proxy環境下でのnpm config設定](https://qiita.com/tenten0213/items/7ca15ce8b54acc3b5719)を参考にして設定するとよい。
 もしくは環境変数`http_proxy`と`https_proxy`にプロキシのURIを設定してもよい（私はそうしている）。
 
-そもそも「npmとかyarnってなんだ？」という話だけど、npmはNode.jsに付属しているパッケージマネージャ、つまりライブラリの依存関係を解決してくれるもので、Javaに例えるとMavenのようなもの。
-それからyarnはnpmレジストリを使用するnpmとは別のパッケージマネージャで、yarnとnpmの関係はJavaに例えるとMavenとGradleの関係に近いと思う。
+そもそも「npmとかyarnってなんなんだ」という話だけど、npmはNode.jsに付属しているパッケージマネージャ、つまりライブラリの依存関係を解決してくれるもので、Javaに例えるとMavenのようなもの。
+それからyarnはnpmレジストリを使用するnpmとは別のパッケージマネージャで、yarnとnpmの関係はJavaに例えるとMavenとGradleの関係に近い。
 
 さて、最後に`create-react-app`をインストールしよう。
 `create-react-app`は`npm install`でインストールする。

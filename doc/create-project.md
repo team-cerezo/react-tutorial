@@ -36,7 +36,7 @@ yarn start
 |`.gitignore`|Gitの管理外にするファイル・ディレクトリを指定するためのファイル。このチュートリアルでは`create-react-app`が生成してくれるものを使う。|
 |`README.md`|プロジェクトの概要や起動方法などを記載するファイル。|
 |`node_modules`|yarnによってインストールされるパッケージたち。このディレクトリはGitの管理外にする。（`create-react-app`が生成してくれた`.gitignore`によって既に管理外に置かれている）|
-|`package.json`|依存パッケージやビルドコマンドを記載するファイル。Mavenでいう`pom.xml`のようなもの。`pom.xml`と違って`package.json`には`scripts`にコマンドを書いて実行できる。そういう意味では`pom.xml`よりもGradleの`build.gradle`の方が似ているかもしれない。|
+|`package.json`|依存パッケージやビルドコマンドを記載するファイル。Mavenでいう`pom.xml`のようなもの。`pom.xml`と違って`package.json`には`scripts`にコマンドを書いて実行できる。そういう意味では`pom.xml`よりもGradleの`build.gradle`の方が似ている。|
 |`public/favicon.ico`|Webページに設定されるアイコン。このチュートリアルでは`favicon.ico`については特に言及しないので好きなものに変えてもよい。|
 |`public/index.html`|ブラウザで開くページ。このページからビルドされたjsファイルを読み込む。ブラウザのタブに表示|
 |`public/manifest.json`|スマートフォンでWebサイトをアプリのように使う場合に使用されるメタ情報。このチュートリアルでは`manifest.json`については特に言及しない。|
