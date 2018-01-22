@@ -18,28 +18,26 @@ const App = () => (
         <p>
             <input type="text" placeholder="やることある？" />
         </p>
-        <div>
-            <ul>
-                <li>
-                    <label>
-                        <input type="checkbox" />
-                        <span>#3 Reactチュートリアル</span>
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" />
-                        <span>#2 JavaScriptチュートリアル</span>
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox" checked="checked" />
-                        <span>#1 環境構築</span>
-                    </label>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" />
+                    <span>#3 Reactチュートリアル</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" />
+                    <span>#2 JavaScriptチュートリアル</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>#1 環境構築</span>
+                </label>
+            </li>
+        </ul>
         <p>
             <button>終わったやつ消す</button>
         </p>
@@ -97,18 +95,16 @@ let todoList = [
 `li`要素を`todoList`から組み立てよう。
 
 ```js
-<div>
-    <ul>
-        {todoList.map(todo => (
-            <li key={todo.id}>
-                <label>
-                    <input type="checkbox" checked={todo.done} />
-                    <span>#{todo.id} {todo.content}</span>
-                </label>
-            </li>
-        ))}
-    </ul>
-</div>
+<ul>
+    {todoList.map(todo => (
+        <li key={todo.id}>
+            <label>
+                <input type="checkbox" checked={todo.done} />
+                <span>#{todo.id} {todo.content}</span>
+            </label>
+        </li>
+    ))}
+</ul>
 ```
 
 `Todo`クラスの配列である`todoList`を、`map`メソッドを使ってJSXで書かれた`li`要素へ変換している。
@@ -493,19 +489,17 @@ const App = () => (
             <input type="text" placeholder="やることある？" value={content}
                 onChange={updateContent} onKeyPress={tryAddTodo} />
         </p>
-        <div>
-            <ul>
-                {todoList.list.map(todo => (
-                    <li key={todo.id}>
-                        <label>
-                            <input type="checkbox" checked={todo.done}
-                                onChange={event => updateStatus(todo.id, event.target.checked)} />
-                            <span>#{todo.id} {todo.content}</span>
-                        </label>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <ul>
+            {todoList.list.map(todo => (
+                <li key={todo.id}>
+                    <label>
+                        <input type="checkbox" checked={todo.done}
+                            onChange={event => updateStatus(todo.id, event.target.checked)} />
+                        <span>#{todo.id} {todo.content}</span>
+                    </label>
+                </li>
+            ))}
+        </ul>
         <p>
             <button onClick={clear}>終わったやつ消す</button>
         </p>
