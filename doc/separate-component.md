@@ -89,7 +89,7 @@ const App = () => (
 //これはエラーになるコード！
 //"'todo' is not defined  no-undef"というエラーが出る！
 const TodoComponent = () => (
-    <li key={todo.id}>
+    <li>
         <label>
             <input type="checkbox" checked={todo.done}
                 onChange={event => updateStatus(todo.id, event.target.checked)} />
@@ -108,7 +108,7 @@ Reactでこのような値の受け渡しをするには`props`が使える。
 const TodoComponent = (props) => {
     const todo = props.todo;
     return (
-        <li key={todo.id}>
+        <li>
             <label>
                 <input type="checkbox" checked={todo.done}
                     onChange={event => updateStatus(todo.id, event.target.checked)} />
@@ -128,7 +128,7 @@ const TodoComponent = (props) => {
 const TodoListComponent = () => (
     <ul>
         {todoList.list.map(todo => (
-            <TodoComponent todo={todo} />
+            <TodoComponent key={todo.id} todo={todo} />
         ))}
     </ul>
 );
@@ -160,7 +160,7 @@ const App = () => (
         <InputContent />
         <TodoListComponent>
             {todoList.list.map(todo => (
-                <TodoComponent todo={todo} />
+                <TodoComponent key={todo.id} todo={todo} />
             ))}
         </TodoListComponent>
         <ClearButton />
@@ -262,7 +262,7 @@ class TodoList {
         }));
     }
     clear() {
-        return new TodoList(this.list.filter(todo => todo.done == false));
+        return new TodoList(this.list.filter(todo => todo.done === false));
     }
 }
 
@@ -319,7 +319,7 @@ const TodoComponent = (props) => {
     const todo = props.todo;
     const updateStatus = props.updateStatus;
     return (
-        <li key={todo.id}>
+        <li>
             <label>
                 <input type="checkbox" checked={todo.done}
                     onChange={event => updateStatus(todo.id, event.target.checked)} />
@@ -351,6 +351,7 @@ const App = () => (
         <TodoListComponent>
             {todoList.list.map(todo => (
                 <TodoComponent
+                    key={todo.id}
                     todo={todo}
                     updateStatus={updateStatus} />
             ))}

@@ -340,7 +340,7 @@ const updateStatus = (id, done) => {
 
 ```js
 const clear = event => {
-    todoList = todoList.filter(todo => todo.done == false);
+    todoList = todoList.filter(todo => todo.done === false);
     render();
 };
 ```
@@ -389,7 +389,7 @@ class TodoList {
         }));
     }
     clear() {
-        return new TodoList(this.list.filter(todo => todo.done == false));
+        return new TodoList(this.list.filter(todo => todo.done === false));
     }
 }
 ```
@@ -441,7 +441,7 @@ class TodoList {
         }));
     }
     clear() {
-        return new TodoList(this.list.filter(todo => todo.done == false));
+        return new TodoList(this.list.filter(todo => todo.done === false));
     }
 }
 
