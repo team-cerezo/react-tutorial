@@ -141,7 +141,7 @@ import Greeting from './hello';
 const foo = 'FOO';
 const bar = 12345;
 export { foo, bar };
-//宣言と同時にexportできる
+//宣言と同時にexportできる
 export const baz = [1, 2, 3];
 
 import { foo, bar, baz } from './foobar';
