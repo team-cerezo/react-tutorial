@@ -78,7 +78,7 @@ import { Todo, TodoList } from './models';
 
 データの分割は少しだけ面倒だ。
 
-次の内容を`src/data.js`に保存する。
+次の内容を`src/store.js`に保存する。
 
 ```js
 import { Todo, TodoList } from './model';
@@ -90,9 +90,9 @@ let todoList = TodoList.empty()
 
 let content = '';
 
-const data = { todoList, content };
+const store = { todoList, content };
 
-export default data;
+export default store;
 ```
 
 データは`Todo`クラスと`TodoList`クラスに依存しているので`src/model.js`を`import`している。
@@ -102,26 +102,26 @@ export default data;
 つまり次のコードは、
 
 ```js
-const data = { todoList, content };
+const store = { todoList, content };
 ```
 
 次のコードと等価だ。
 
 ```js
-const data = { todoList: todoList, content: content };
+const store = { todoList: todoList, content: content };
 ```
 
-この`data`を`export`している。
+この`store`を`export`している。
 
 ```js
-export default data;
+export default store;
 ```
 
-変数`content`と変数`todoList`を参照していた箇所は`data.`を付けるように修正する。
+変数`content`と変数`todoList`を参照していた箇所は`store.`を付けるように修正する。
 
 ### exportとexport default
 
-`data`の`export`には`Todo`クラスと`TodoList`クラスの`export`のときにはなかった`default`というキーワードが付いている。
+`store`の`export`には`Todo`クラスと`TodoList`クラスの`export`のときにはなかった`default`というキーワードが付いている。
 
 `default`が付いているほうをデフォルトエクスポート、`default`が付いていないほうを名前付きエクスポートと呼ぶ。
 
@@ -156,31 +156,31 @@ import { foo, bar, baz } from './foobar';
 
 ```js
 import { Todo } from './models';
-import data from './data';
+import store from './store';
 
 let render;
 
 export const updateContent = event => {
-    data.content = event.target.value;
+    store.content = event.target.value;
     render();
 };
 
 export const tryAddTodo = event => {
-    if (data.content !== '' && event.key === 'Enter') {
-        const todo = Todo.create(data.content);
-        data.todoList = data.todoList.add(todo);
-        data.content = '';
+    if (store.content !== '' && event.key === 'Enter') {
+        const todo = Todo.create(store.content);
+        store.todoList = store.todoList.add(todo);
+        store.content = '';
         render();
     }
 };
 
 export const updateStatus = (id, done) => {
-    data.todoList = data.todoList.setDone(id, done);
+    store.todoList = store.todoList.setDone(id, done);
     render();
 };
 
 export const clear = event => {
-    data.todoList = data.todoList.clear();
+    store.todoList = store.todoList.clear();
     render();
 };
 
@@ -261,7 +261,7 @@ export const ClearButton = (props) => (
 ```js
 import React from 'react';
 
-import data from './data';
+import store from './store';
 import { updateContent, tryAddTodo, updateStatus, clear } from './actions';
 import { InputContent, TodoListComponent, TodoComponent, ClearButton } from './components';
 
@@ -269,11 +269,11 @@ const App = () => (
     <div>
         <h1>やること</h1>
         <InputContent
-            content={data.content}
+            content={store.content}
             updateContent={updateContent}
             tryAddTodo={tryAddTodo} />
         <TodoListComponent>
-            {data.todoList.list.map(todo => (
+            {store.todoList.list.map(todo => (
                 <TodoComponent
                     key={todo.id}
                     todo={todo}
