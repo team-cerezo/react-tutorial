@@ -81,7 +81,7 @@ import { Todo, TodoList } from './models';
 次の内容を`src/store.js`に保存する。
 
 ```js
-import { Todo, TodoList } from './model';
+import { Todo, TodoList } from './models';
 
 let todoList = TodoList.empty()
     .add(Todo.create('環境構築').setDone(true))
