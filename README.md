@@ -5,11 +5,9 @@
 ## チュートリアルの進め方
 
 ドキュメントを読みながらコードを書く。
-コードのサンプルは https://github.com/team-cerezo/react-sample にある。
+コードのサンプルは https://github.com/team-cerezo/react-sample にあるので適宜参照してほしい。
 
-ドキュメントは後述するようにGitBookで見られるようにしている。
-
-GitHubで`.md`ファイルを直接見てもよい。
+ドキュメントは後述するようにGitBookで見られるようにしているけれど、GitHubで`.md`ファイルを直接見ても大丈夫。
 目次は[SUMMARY.md](./doc/SUMMARY.md)。
 
 ## このチュートリアルの開発について
