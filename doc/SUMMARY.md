@@ -7,6 +7,7 @@
 * [とりあえずざくっと書いてみる](coding-roughly.md)
 * [コンポーネントを分割する](separate-component.md)
 * [ファイルも分割する](separate-file.md)
+* [データを整理する](refactor-store.md)
 * [Fluxを使う](flux.md)
 * [React Routerを使う](router.md)
 * [REST API](rest-api.md)
