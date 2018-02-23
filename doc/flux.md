@@ -161,7 +161,7 @@ class CountStore extends ReduceStore {
         switch (type) {
             case ActionTypes.INCREMENT: {
                 const { value } = payload;
-                return state.count + value;
+                return state + value;
             }
             default:
                 return state;
