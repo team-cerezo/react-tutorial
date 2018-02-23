@@ -123,6 +123,23 @@ export const increment = event => {
 `payload`はさらに`value`というプロパティを持っているが、今回は足しこむ数値をこのように`value`として渡すようにした。
 （`payload`にはアクションの付加情報として自由に値を渡せて、何を渡すかはアプリケーションの設計次第だ）
 
+ボタンから、このアクションを呼び出すようにしておこう。
+`src/index.js`に次の`import`を追加して、
+
+```js
+import { increment } from './actions';
+```
+
+`IncButton`に`onClick`を足そう。
+
+```js
+const IncButon = () => (
+    <div>
+        <button onClick={increment}>+1</button>
+    </div>
+);
+```
+
 ## アクションを受け取る`Store`を作る
 
 次はアクションを受け取る`Store`を作ろう。
@@ -203,5 +220,110 @@ reduce(state, { type, payload }) {
     }
 }
 ```
+
+これで`Store`が出来た。
+
+## `Store`をビューに組み込む
+
+最後に`Store`をビューに組み込もう。
+この手順を終えれば、`Store`に変更があればビューに通知されて勝手に`render`してくれるようになる。
+
+`src/index.js`に次の`import`を足して、
+
+```js
+import { Container } from 'flux/utils';
+import { countStore } from './store';
+```
+
+`App`で`Counter`に`0`を固定で渡していたところを`count`を渡すように変えて、
+
+```js
+const App = ({ count }) => (
+    <div>
+        <Counter count={count} />
+        <IncButon />
+    </div>
+);
+```
+
+`App`が`Store`の変更を受け取るようにして、
+
+```js
+const getStores = () => [countStore];
+
+const calculateState = () => {
+    return { count: countStore.getState() };
+};
+
+const AppContainer = Container.createFunctional(App, getStores, calculateState)
+```
+
+`App`の代わりに`AppContainer`を`render`するように変更する。
+
+```js
+ReactDOM.render(<AppContainer />, document.getElementById('root'));
+```
+
+色々なことを一気にやりすぎた。
+少しずつ見ていこう。
+
+肝になるのは`App`が`Store`の変更を受け取るようにしたところだ。
+`Container.createFunctional`にビュー（`App`）と、状態が変更されたときにビューに通知をする対象となる`Store`を返す関数（`getStores`）と、ビューが使用する`Store`を返す関数（`calculateState`）を渡して新たなビューを作成している（`AppContainer`）。
+
+`getStores`は`Store`の配列を返すだけのアロー関数。
+ここで返された`Store`の状態が変更されたとき、ビューに通知されてビューは`render`を呼び出すようになる。
+つまり、この関数が自動で`render`を呼び出す仕組みの一旦を担っている。
+
+`calculateState`はビューが使用する状態を返すアロー関数。
+今回は`count`という名前で`countStore`が持つ状態を参照できるようにしている。
+ここで設定された状態は`Container.createFunctional`に渡されるビュー（ここでは`App`）の`props`（つまりアロー関数の引数）として渡される。
+
+最後に`src/index.js`の全体を掲載しておく。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { increment } from './actions';
+import { Container } from 'flux/utils';
+import { countStore } from './store';
+
+const Counter = ({ count }) => (<h1>{count}</h1>);
+
+const IncButon = () => (
+    <div>
+        <button onClick={increment}>+1</button>
+    </div>
+);
+
+const App = ({ count }) => (
+    <div>
+        <Counter count={count} />
+        <IncButon />
+    </div>
+);
+
+const getStores = () => [countStore];
+
+const calculateState = () => {
+    return { count: countStore.getState() };
+};
+
+const AppContainer = Container.createFunctional(App, getStores, calculateState)
+
+ReactDOM.render(<AppContainer />, document.getElementById('root'));
+```
+
+## カウンター完成＆課題
+
+以上の手順をこなせばボタンを押すとカウントアップするものが出来たと思う。
+
+ここでいくつか課題を出そう。
+
+* 押すと値をカウントダウン（デクリメント）するボタンを追加してみよう
+* 押すと値を`0`にリセットするボタンを追加してみよう
+* どのタイプのアクションが呼び出されたのかを持つ`Store`を追加して、画面に履歴表示してみよう
+* `todolist`にFluxを組み込んでみよう
+
+なお、`todolist`のサンプルコードにはFluxを組み込んだものが既にあるので参考にしてみてね。
 
 https://github.com/team-cerezo/react-sample/tree/flux
