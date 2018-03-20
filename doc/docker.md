@@ -61,5 +61,5 @@ Rascaloidを動かす（http://localhost:8080）。
 # api
 docker run -d --name=rascaloid-api -p 3000:3000 kawasima/rascaloid
 # ui(RI)
-docker run -d --name=rascaloid-ri -e RASCALOID_HOST=rascaloid-api -e RASCALOID_PORT=3000 -e HTTP_PROXY= -p 8080:3003 --link rascaroid-ri kawasima/rascaloid
+docker run -d --name=rascaloid-ri -e RASCALOID_HOST=rascaloid-api -e RASCALOID_PORT=3000 -e HTTP_PROXY= -p 8080:3003 --link rascaloid-api kawasima/rascaloid-ri
 ```
