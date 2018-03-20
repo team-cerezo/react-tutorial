@@ -54,3 +54,12 @@ bfe103a8cf35        team-cerezo/hello-ui    "nginx -g 'daemon of…"   8 minutes
 ```console
 docker exec -it hello-ui /bin/bash
 ```
+
+Rascaloidを動かす（http://localhost:8080）。
+
+```console
+# api
+docker run -d --name=rascaloid-api -p 3000:3000 kawasima/rascaloid
+# ui(RI)
+docker run -d --name=rascaloid-ri -e RASCALOID_HOST=rascaloid-api -e RASCALOID_PORT=3000 -e HTTP_PROXY= -p 8080:3003 --link rascaroid-ri kawasima/rascaloid
+```
