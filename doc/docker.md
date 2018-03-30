@@ -55,13 +55,13 @@ bfe103a8cf35        team-cerezo/hello-ui    "nginx -g 'daemon of…"   8 minutes
 docker exec -it hello-ui /bin/bash
 ```
 
-Rascaloidを動かす（http://localhost:8080）。
+Rascaloid（http://localhost:3000）とUIの参照実装を動かす（http://localhost:3003）。
 
 ```console
 # api
 docker run -d --name=rascaloid-api -p 3000:3000 kawasima/rascaloid
 # ui(RI)
-docker run -d --name=rascaloid-ri -e RASCALOID_HOST=rascaloid-api -e RASCALOID_PORT=3000 -e HTTP_PROXY= -p 8080:3003 --link rascaloid-api kawasima/rascaloid-ri
+docker run -d --name=rascaloid-ri -e RASCALOID_HOST=rascaloid-api -e RASCALOID_PORT=3000 -e HTTP_PROXY= -p 3003:3003 --link rascaloid-api kawasima/rascaloid-ri
 ```
 
 ※Docker Toolboxを使っている場合（Win7）は更に `docker-machine ssh default -L 3000:localhost:3000` でポートフォワードの設定をする
