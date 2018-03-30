@@ -55,7 +55,7 @@ bfe103a8cf35        team-cerezo/hello-ui    "nginx -g 'daemon of…"   8 minutes
 docker exec -it hello-ui /bin/bash
 ```
 
-Rascaloid（http://localhost:3000）とUIの参照実装を動かす（http://localhost:3003）。
+Rascaloid（ http://localhost:3000 ）とUIの参照実装を動かす（ http://localhost:3003 ）。
 
 ```console
 # api
