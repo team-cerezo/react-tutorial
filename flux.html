@@ -1,0 +1,652 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Fluxを使う · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="router.html" />
+    
+    
+    <link rel="prev" href="refactor-store.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="setup.html">
+            
+                <a href="setup.html">
+            
+                    
+                    環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="es2015.html">
+            
+                <a href="es2015.html">
+            
+                    
+                    JavaScript(ES2015)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="create-project.html">
+            
+                <a href="create-project.html">
+            
+                    
+                    プロジェクトを作る
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="helloworld.html">
+            
+                <a href="helloworld.html">
+            
+                    
+                    Hello, world!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="coding-roughly.html">
+            
+                <a href="coding-roughly.html">
+            
+                    
+                    とりあえずざくっと書いてみる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="separate-component.html">
+            
+                <a href="separate-component.html">
+            
+                    
+                    コンポーネントを分割する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="separate-file.html">
+            
+                <a href="separate-file.html">
+            
+                    
+                    ファイルも分割する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="refactor-store.html">
+            
+                <a href="refactor-store.html">
+            
+                    
+                    データを整理する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="flux.html">
+            
+                <a href="flux.html">
+            
+                    
+                    Fluxを使う
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="router.html">
+            
+                <a href="router.html">
+            
+                    
+                    React Routerを使う
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="rest-api.html">
+            
+                <a href="rest-api.html">
+            
+                    
+                    REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="cheat-sheet.html">
+            
+                <a href="cheat-sheet.html">
+            
+                    
+                    チートシート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="reference.html">
+            
+                <a href="reference.html">
+            
+                    
+                    参考になるウェブサイトなど
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Fluxを使う</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wipflux&#x3092;&#x4F7F;&#x3046;">[WIP]Flux&#x3092;&#x4F7F;&#x3046;</h1>
+<p>&#x3053;&#x308C;&#x307E;&#x3067;&#x4F5C;&#x3063;&#x305F;todo&#x30EA;&#x30B9;&#x30C8;&#x306B;Flux&#x3092;&#x9069;&#x7528;&#x3059;&#x308B;&#x306E;&#x304C;&#x76EE;&#x6A19;&#x3060;&#x3051;&#x3069;&#x3001;&#x305D;&#x306E;&#x524D;&#x306B;&#x30BC;&#x30ED;&#x304B;&#x3089;Flux&#x3092;&#x4F7F;&#x3063;&#x305F;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x5165;&#x9580;&#x3057;&#x3066;&#x304A;&#x3053;&#x3046;&#x3002;</p>
+<p>&#x3068;&#x3044;&#x3046;&#x308F;&#x3051;&#x3067;&#x4EFB;&#x610F;&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3067;<code>todolist</code>&#x3068;&#x306F;&#x5225;&#x306E;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x308D;&#x3046;&#x3002;</p>
+<pre><code class="lang-console">create-react-app hello-flux
+</code></pre>
+<p>&#x4F5C;&#x6210;&#x3055;&#x308C;&#x305F;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x3066;&#x3001;</p>
+<pre><code class="lang-console">cd hello-flux
+</code></pre>
+<p>Flux&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3088;&#x3046;&#x3002;</p>
+<pre><code class="lang-console">yarn add flux
+</code></pre>
+<p>&#x3042;&#x3001;&#x8981;&#x3089;&#x306A;&#x3044;&#x3082;&#x306E;&#x306F;&#x6D88;&#x3057;&#x3066;&#x304A;&#x3053;&#x3046;&#x3002;</p>
+<pre><code class="lang-console">del /q src\*
+</code></pre>
+<h2 id="&#x30AB;&#x30A6;&#x30F3;&#x30BF;&#x30FC;&#x3092;&#x4F5C;&#x308B;">&#x30AB;&#x30A6;&#x30F3;&#x30BF;&#x30FC;&#x3092;&#x4F5C;&#x308B;</h2>
+<p>&#x6570;&#x5B57;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x3066;&#x3001;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x307D;&#x3061;&#x307D;&#x3061;&#x62BC;&#x3059;&#x3068;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;&#x3059;&#x308B;&#x30B7;&#x30F3;&#x30D7;&#x30EB;&#x306A;&#x4F8B;&#x3067;&#x9032;&#x3081;&#x3088;&#x3046;&#x3002;</p>
+<p>&#x307E;&#x305A;&#x306F;&#x30D3;&#x30E5;&#x30FC;&#x3092;&#x4F5C;&#x308D;&#x3046;&#x3002;
+&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;<code>src/index.js</code>&#x306B;&#x66F8;&#x3044;&#x3066;<code>yarn start</code>&#x3067;&#x8D77;&#x52D5;&#x3057;&#x3088;&#x3046;&#x3002;
+&#xFF08;&#x5C0F;&#x3055;&#x3044;&#x30B3;&#x30FC;&#x30C9;&#xFF06;&#x8AAC;&#x660E;&#x304C;&#x3057;&#x3084;&#x3059;&#x3044;&#x306E;&#x3067;&#x3082;&#x306E;&#x3050;&#x3055;&#x767A;&#x63EE;&#x3057;&#x3066;<code>src/index.js</code>&#x306B;&#x66F8;&#x3044;&#x3061;&#x3083;&#x3063;&#x3066;&#x3044;&#x308B;&#x3051;&#x308C;&#x3069;&#x3001;&#x3053;&#x308C;&#x3092;<code>src/components.js</code>&#x3068;&#x304B;<code>src/component-structure.js</code>&#x306B;&#x5206;&#x5272;&#x3059;&#x308B;&#x306E;&#x3082;&#x81EA;&#x7FD2;&#x30CD;&#x30BF;&#x306B;&#x3044;&#x3044;&#x304B;&#x3082;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+
+<span class="hljs-keyword">const</span> Counter = ({ count }) =&gt; (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{count}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>);
+
+<span class="hljs-keyword">const</span> IncButon = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>+1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    &lt;div&gt;
+        &lt;Counter count={0} /&gt;
+        &lt;IncButon /&gt;
+    &lt;/div&gt;
+);
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;root&apos;));
+</code></pre>
+<p>&#x3053;&#x306E;&#x3042;&#x3068;&#x306F;&#x6B21;&#x306E;&#x624B;&#x9806;&#x3067;&#x9032;&#x3081;&#x308B;&#x3002;</p>
+<ul>
+<li>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308B;</li>
+<li>&#x30DC;&#x30BF;&#x30F3;&#x306B;<code>onClick</code>&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x547C;&#x3076;</li>
+<li>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;<code>Store</code>&#x3092;&#x4F5C;&#x308B;</li>
+<li><code>Store</code>&#x3092;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x3080;</li>
+</ul>
+<h2 id="&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308B;">&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308B;</h2>
+<p>Flux&#x3067;&#x306F;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x3092;&#x5B9A;&#x6570;&#x3067;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x3002;</p>
+<p>&#x4ECA;&#x56DE;&#x306F;&#x300C;&#x30A4;&#x30F3;&#x30AF;&#x30EA;&#x30E1;&#x30F3;&#x30C8;&#x3059;&#x308B;&#x300D;&#x3068;&#x3044;&#x3046;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3060;&#x3051;&#x3002;
+&#xFF08;&#x81EA;&#x7FD2;&#x306E;&#x30CD;&#x30BF;&#x3068;&#x3057;&#x3066;&#x300C;&#x30C7;&#x30AF;&#x30EA;&#x30E1;&#x30F3;&#x30C8;&#x3059;&#x308B;&#x300D;&#x3068;&#x304B;&#x300C;0&#x306B;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x3059;&#x308B;&#x300D;&#x307F;&#x305F;&#x3044;&#x306A;&#x30BF;&#x30A4;&#x30D7;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306E;&#x3082;&#x3044;&#x3044;&#x304B;&#x3082;&#xFF09;</p>
+<p><code>src/action-types.js</code>&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;&#x66F8;&#x3053;&#x3046;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    INCREMENT: <span class="hljs-built_in">Symbol</span>()
+};
+</code></pre>
+<p><code>Symbol</code>&#x306F;&#x30E6;&#x30CB;&#x30FC;&#x30AF;&#x3067;&#x30A4;&#x30DF;&#x30E5;&#x30FC;&#x30BF;&#x30D6;&#x30EB;&#x306A;&#x5024;&#x3092;&#x4F5C;&#x308C;&#x308B;&#x578B;&#x3067;&#x3001;&#x3053;&#x3046;&#x3044;&#x3063;&#x305F;&#x30AD;&#x30FC;&#x9805;&#x76EE;&#x3092;&#x8868;&#x3059;&#x306E;&#x306B;&#x6700;&#x9069;&#x3060;&#x3002;</p>
+<h2 id="&#x30DC;&#x30BF;&#x30F3;&#x306B;onclick&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x547C;&#x3076;">&#x30DC;&#x30BF;&#x30F3;&#x306B;<code>onClick</code>&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x547C;&#x3076;</h2>
+<p>&#x6B21;&#x306F;&#x30DC;&#x30BF;&#x30F3;&#x304B;&#x3089;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x547C;&#x3076;&#x3088;&#x306B;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;&#x3002;</p>
+<p>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x4E2D;&#x8EAB;&#x306F;Flux&#x306E;<code>Dispatcher</code>&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3002;
+<code>Dispatcher</code>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x4F55;&#x304B;&#x3068;&#x3044;&#x3046;&#x3068;&#x2026;&#x2026;&#x8AAC;&#x660E;&#x304C;&#x96E3;&#x3057;&#x3044;&#x306A;&#x3002;
+&#x3048;&#x3048;&#x3068;&#x3001;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x3066;&#x5185;&#x90E8;&#x306B;&#x4FDD;&#x6301;&#x3057;&#x3066;&#x3044;&#x308B;<code>Store</code>&#x306B;&#x5BFE;&#x3057;&#x3066;&#x30C7;&#x30A3;&#x30B9;&#x30D1;&#x30C3;&#x30C1;&#x3059;&#x308B;&#x3082;&#x306E;&#x306A;&#x3093;&#x3060;&#x3051;&#x3069;&#x3001;&#x305D;&#x3093;&#x306A;&#x8A00;&#x8449;&#x3060;&#x3051;&#x3067;&#x7406;&#x89E3;&#x51FA;&#x6765;&#x305F;&#x3089;&#x82E6;&#x52B4;&#x306F;&#x3057;&#x306A;&#x3044;&#x3088;&#x306D;&#x3002;</p>
+<p>&#x307E;&#x3042;&#x3001;&#x3068;&#x308A;&#x3042;&#x3048;&#x305A;&#x66F8;&#x304D;&#x306A;&#x304C;&#x3089;&#x7406;&#x89E3;&#x3057;&#x3066;&#x3044;&#x3053;&#x3046;&#x3002;</p>
+<p><code>Dispatcher</code>&#x306F;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x3002;
+<code>src/dispatcher.js</code>&#x306B;&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x3053;&#x3046;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Dispatcher } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;flux&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">new</span> Dispatcher();
+</code></pre>
+<p>&#x3053;&#x306E;<code>Dispatcher</code>&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x6E21;&#x3059;&#xFF08;&#xFF1F;&#xFF09;&#x8D77;&#x3053;&#x3059;&#xFF08;&#xFF1F;&#xFF09;&#x767A;&#x706B;&#x3059;&#x308B;&#xFF08;&#xFF1F;&#xFF09;&#x308F;&#x3051;&#x3060;&#x3002;
+&#xFF08;&#x8AAC;&#x660E;&#x306E;&#x8A00;&#x8449;&#x304C;&#x96E3;&#x3057;&#x3044;&#x2026;&#x2026;&#x3042;&#x3068;&#x3067;&#x8A00;&#x3044;&#x56DE;&#x3057;&#x3092;&#x4FEE;&#x6B63;&#x3059;&#x308B;&#x304B;&#x3082;&#xFF09;</p>
+<p><code>src/actions.js</code>&#x306B;&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x3053;&#x3046;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> CounterDispatcher <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./dispatcher&apos;</span>;
+<span class="hljs-keyword">import</span> ActionTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> increment = event =&gt; {
+    <span class="hljs-keyword">const</span> value = <span class="hljs-number">1</span>;
+    CounterDispatcher.dispatch({
+        type: ActionTypes.INCREMENT,
+        payload: { value }
+    });
+};
+</code></pre>
+<p>&#x4F55;&#x3092;&#x3057;&#x3066;&#x3044;&#x308B;&#x304B;&#x3068;&#x3044;&#x3046;&#x3068;&#x3001;&#x3059;&#x3054;&#x304F;&#x5358;&#x7D14;&#x3067;&#x3001;<code>CounterDispatcher</code>&#x3068;&#x540D;&#x4ED8;&#x3051;&#x305F;<code>Dispatcher</code>&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;<code>dispatch</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<p>&#x5F15;&#x6570;&#x306F;<code>type</code>&#x3068;<code>payload</code>&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x3066;&#x3001;<code>type</code>&#x306B;&#x306F;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+<code>payload</code>&#x306F;&#x3055;&#x3089;&#x306B;<code>value</code>&#x3068;&#x3044;&#x3046;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;&#x304C;&#x3001;&#x4ECA;&#x56DE;&#x306F;&#x8DB3;&#x3057;&#x3053;&#x3080;&#x6570;&#x5024;&#x3092;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;<code>value</code>&#x3068;&#x3057;&#x3066;&#x6E21;&#x3059;&#x3088;&#x3046;&#x306B;&#x3057;&#x305F;&#x3002;
+&#xFF08;<code>payload</code>&#x306B;&#x306F;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x4ED8;&#x52A0;&#x60C5;&#x5831;&#x3068;&#x3057;&#x3066;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x6E21;&#x305B;&#x3066;&#x3001;&#x4F55;&#x3092;&#x6E21;&#x3059;&#x304B;&#x306F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x8A08;&#x6B21;&#x7B2C;&#x3060;&#xFF09;</p>
+<p>&#x30DC;&#x30BF;&#x30F3;&#x304B;&#x3089;&#x3001;&#x3053;&#x306E;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x304A;&#x3053;&#x3046;&#x3002;
+<code>src/index.js</code>&#x306B;&#x6B21;&#x306E;<code>import</code>&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x3001;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { increment } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actions&apos;</span>;
+</code></pre>
+<p><code>IncButton</code>&#x306B;<code>onClick</code>&#x3092;&#x8DB3;&#x305D;&#x3046;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> IncButon = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{increment}</span>&gt;</span>+1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+</code></pre>
+<h2 id="&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;store&#x3092;&#x4F5C;&#x308B;">&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;<code>Store</code>&#x3092;&#x4F5C;&#x308B;</h2>
+<p>&#x6B21;&#x306F;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;<code>Store</code>&#x3092;&#x4F5C;&#x308D;&#x3046;&#x3002;
+<code>Store</code>&#x306F;&#x30C7;&#x30FC;&#x30BF;&#xFF08;Flux&#x306E;&#x6587;&#x8108;&#x3060;&#x3068;&#x300C;&#x72B6;&#x614B;&#x300D;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3068;&#x601D;&#x3046;&#xFF09;&#x306E;&#x5165;&#x308C;&#x7269;&#x3060;&#x3002;</p>
+<p><code>src/store.js</code>&#x306B;&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x3053;&#x3046;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { ReduceStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;flux/utils&apos;</span>;
+
+<span class="hljs-keyword">import</span> CounterDispatcher <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./dispatcher&apos;</span>;
+<span class="hljs-keyword">import</span> ActionTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CountStore</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ReduceStore</span> </span>{
+    getInitialState() {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    reduce(state, { type, payload }) {
+        <span class="hljs-keyword">switch</span> (type) {
+            <span class="hljs-keyword">case</span> ActionTypes.INCREMENT: {
+                <span class="hljs-keyword">const</span> { value } = payload;
+                <span class="hljs-keyword">return</span> state + value;
+            }
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-keyword">return</span> state;
+        }
+    }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> countStore = <span class="hljs-keyword">new</span> CountStore(CounterDispatcher);
+</code></pre>
+<p>&#x5C11;&#x3057;&#x305A;&#x3064;&#x898B;&#x3066;&#x3044;&#x3053;&#x3046;&#x3002;</p>
+<p>&#x307E;&#x305A;&#x30AF;&#x30E9;&#x30B9;&#x3068;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x5BA3;&#x8A00;&#x306B;&#x6CE8;&#x76EE;&#x3057;&#x3088;&#x3046;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CountStore</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ReduceStore</span> </span>{
+    getInitialState() {
+    }
+    reduce(state, { type, payload }) {
+    }
+}
+</code></pre>
+<p><code>CountStore</code>&#x30AF;&#x30E9;&#x30B9;&#x306F;<code>ReduceStore</code>&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+<code>ReduceStore</code>&#x306F;Flux&#x304C;&#x7528;&#x610F;&#x3057;&#x3066;&#x304F;&#x308C;&#x3066;&#x3044;&#x308B;&#x57FA;&#x5E95;&#x30AF;&#x30E9;&#x30B9;&#x3060;&#x3002;</p>
+<p>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;<code>getInitialState</code>&#x3068;<code>reduce</code>&#x306E;2&#x3064;&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3002;
+&#x3053;&#x308C;&#x3089;&#x306F;<code>ReduceStore</code>&#x304B;&#x3089;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30E9;&#x30A4;&#x30C9;&#x3057;&#x305F;&#x3082;&#x306E;&#x3060;&#x3002;</p>
+<p><code>getInitialState</code>&#x306F;<code>Store</code>&#x306E;&#x521D;&#x671F;&#x72B6;&#x614B;&#x3092;&#x8FD4;&#x3059;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3060;&#x3002;
+&#x4ECA;&#x56DE;&#x306F;&#x5358;&#x306B;<code>0</code>&#x3092;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+&#x3064;&#x307E;&#x308A;&#x30AB;&#x30A6;&#x30F3;&#x30BF;&#x30FC;&#x306E;&#x521D;&#x671F;&#x5024;&#x306F;<code>0</code>&#x3060;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3002;</p>
+<pre><code class="lang-js">getInitialState() {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><code>reduce</code>&#x306F;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;&#x3068;&#x547C;&#x3073;&#x51FA;&#x3055;&#x308C;&#x308B;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x3001;&#x73FE;&#x5728;&#x306E;&#x72B6;&#x614B;&#xFF08;<code>state</code>&#xFF09;&#x3068;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#xFF08;<code>{ type, payload }</code>&#xFF09;&#x3092;&#x5F15;&#x6570;&#x306B;&#x53D6;&#x3063;&#x3066;&#x3001;&#x65B0;&#x3057;&#x3044;&#x72B6;&#x614B;&#x3092;&#x8FD4;&#x3059;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3060;&#x3002;
+&#x73FE;&#x5728;&#x306E;&#x72B6;&#x614B;&#x304B;&#x3089;&#x65B0;&#x3057;&#x3044;&#x72B6;&#x614B;&#x3092;&#x5C0E;&#x304D;&#x51FA;&#x3059;&#x51E6;&#x7406;&#x306F;&#x3001;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x306B;&#x3088;&#x3063;&#x3066;&#x7570;&#x306A;&#x308B;&#x3002;
+&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x306B;&#x3088;&#x308B;&#x51E6;&#x7406;&#x306E;&#x632F;&#x308A;&#x5206;&#x3051;&#x306B;&#x306F;<code>switch</code>&#x3092;&#x4F7F;&#x3046;&#x306E;&#x304C;&#x826F;&#x3044;&#x3002;
+&#x4ECA;&#x56DE;&#x306F;<code>INCREMENT</code>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x6642;&#x306B;<code>payload</code>&#x304B;&#x3089;&#x53D6;&#x308A;&#x51FA;&#x3057;&#x305F;<code>value</code>&#x3092;&#x73FE;&#x5728;&#x306E;&#x72B6;&#x614B;&#x306B;&#x8DB3;&#x3057;&#x3066;&#x65B0;&#x3057;&#x3044;&#x72B6;&#x614B;&#x3092;&#x5C0E;&#x304D;&#x51FA;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<p>&#x306A;&#x304A;&#x3001;&#x672A;&#x77E5;&#x306E;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x305F;&#x5834;&#x5408;&#x306F;&#x73FE;&#x5728;&#x306E;&#x72B6;&#x614B;&#x3092;&#x305D;&#x306E;&#x307E;&#x307E;&#x8FD4;&#x3059;&#x306E;&#x304C;&#x666E;&#x901A;&#x3060;&#x3002;</p>
+<pre><code class="lang-js">reduce(state, { type, payload }) {
+    <span class="hljs-keyword">switch</span> (type) {
+        <span class="hljs-keyword">case</span> ActionTypes.INCREMENT: {
+            <span class="hljs-keyword">const</span> { value } = payload;
+            <span class="hljs-keyword">return</span> state + value;
+        }
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<p>&#x3053;&#x308C;&#x3067;<code>Store</code>&#x304C;&#x51FA;&#x6765;&#x305F;&#x3002;</p>
+<h2 id="store&#x3092;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x3080;"><code>Store</code>&#x3092;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x3080;</h2>
+<p>&#x6700;&#x5F8C;&#x306B;<code>Store</code>&#x3092;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x3082;&#x3046;&#x3002;
+&#x3053;&#x306E;&#x624B;&#x9806;&#x3092;&#x7D42;&#x3048;&#x308C;&#x3070;&#x3001;<code>Store</code>&#x306B;&#x5909;&#x66F4;&#x304C;&#x3042;&#x308C;&#x3070;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x901A;&#x77E5;&#x3055;&#x308C;&#x3066;&#x52DD;&#x624B;&#x306B;<code>render</code>&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x3002;</p>
+<p><code>src/index.js</code>&#x306B;&#x6B21;&#x306E;<code>import</code>&#x3092;&#x8DB3;&#x3057;&#x3066;&#x3001;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Container } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;flux/utils&apos;</span>;
+<span class="hljs-keyword">import</span> { countStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store&apos;</span>;
+</code></pre>
+<p><code>App</code>&#x3067;<code>Counter</code>&#x306B;<code>0</code>&#x3092;&#x56FA;&#x5B9A;&#x3067;&#x6E21;&#x3057;&#x3066;&#x3044;&#x305F;&#x3068;&#x3053;&#x308D;&#x3092;<code>count</code>&#x3092;&#x6E21;&#x3059;&#x3088;&#x3046;&#x306B;&#x5909;&#x3048;&#x3066;&#x3001;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> App = ({ count }) =&gt; (
+    &lt;div&gt;
+        &lt;Counter count={count} /&gt;
+        &lt;IncButon /&gt;
+    &lt;/div&gt;
+);
+</code></pre>
+<p><code>App</code>&#x304C;<code>Store</code>&#x306E;&#x5909;&#x66F4;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3001;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> getStores = () =&gt; [countStore];
+
+<span class="hljs-keyword">const</span> calculateState = () =&gt; {
+    <span class="hljs-keyword">return</span> { count: countStore.getState() };
+};
+
+<span class="hljs-keyword">const</span> AppContainer = Container.createFunctional(App, getStores, calculateState)
+</code></pre>
+<p><code>App</code>&#x306E;&#x4EE3;&#x308F;&#x308A;&#x306B;<code>AppContainer</code>&#x3092;<code>render</code>&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x5909;&#x66F4;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js">ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AppContainer</span> /&gt;</span>, document.getElementById(&apos;root&apos;));
+</span></code></pre>
+<p>&#x8272;&#x3005;&#x306A;&#x3053;&#x3068;&#x3092;&#x4E00;&#x6C17;&#x306B;&#x3084;&#x308A;&#x3059;&#x304E;&#x305F;&#x3002;
+&#x5C11;&#x3057;&#x305A;&#x3064;&#x898B;&#x3066;&#x3044;&#x3053;&#x3046;&#x3002;</p>
+<p>&#x809D;&#x306B;&#x306A;&#x308B;&#x306E;&#x306F;<code>App</code>&#x304C;<code>Store</code>&#x306E;&#x5909;&#x66F4;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x305F;&#x3068;&#x3053;&#x308D;&#x3060;&#x3002;
+<code>Container.createFunctional</code>&#x306B;&#x30D3;&#x30E5;&#x30FC;&#xFF08;<code>App</code>&#xFF09;&#x3068;&#x3001;&#x72B6;&#x614B;&#x304C;&#x5909;&#x66F4;&#x3055;&#x308C;&#x305F;&#x3068;&#x304D;&#x306B;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x901A;&#x77E5;&#x3092;&#x3059;&#x308B;&#x5BFE;&#x8C61;&#x3068;&#x306A;&#x308B;<code>Store</code>&#x3092;&#x8FD4;&#x3059;&#x95A2;&#x6570;&#xFF08;<code>getStores</code>&#xFF09;&#x3068;&#x3001;&#x30D3;&#x30E5;&#x30FC;&#x304C;&#x4F7F;&#x7528;&#x3059;&#x308B;<code>Store</code>&#x3092;&#x8FD4;&#x3059;&#x95A2;&#x6570;&#xFF08;<code>calculateState</code>&#xFF09;&#x3092;&#x6E21;&#x3057;&#x3066;&#x65B0;&#x305F;&#x306A;&#x30D3;&#x30E5;&#x30FC;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x3044;&#x308B;&#xFF08;<code>AppContainer</code>&#xFF09;&#x3002;</p>
+<p><code>getStores</code>&#x306F;<code>Store</code>&#x306E;&#x914D;&#x5217;&#x3092;&#x8FD4;&#x3059;&#x3060;&#x3051;&#x306E;&#x30A2;&#x30ED;&#x30FC;&#x95A2;&#x6570;&#x3002;
+&#x3053;&#x3053;&#x3067;&#x8FD4;&#x3055;&#x308C;&#x305F;<code>Store</code>&#x306E;&#x72B6;&#x614B;&#x304C;&#x5909;&#x66F4;&#x3055;&#x308C;&#x305F;&#x3068;&#x304D;&#x3001;&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x901A;&#x77E5;&#x3055;&#x308C;&#x3066;&#x30D3;&#x30E5;&#x30FC;&#x306F;<code>render</code>&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x3002;
+&#x3064;&#x307E;&#x308A;&#x3001;&#x3053;&#x306E;&#x95A2;&#x6570;&#x304C;&#x81EA;&#x52D5;&#x3067;<code>render</code>&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x4ED5;&#x7D44;&#x307F;&#x306E;&#x4E00;&#x65E6;&#x3092;&#x62C5;&#x3063;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<p><code>calculateState</code>&#x306F;&#x30D3;&#x30E5;&#x30FC;&#x304C;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x72B6;&#x614B;&#x3092;&#x8FD4;&#x3059;&#x30A2;&#x30ED;&#x30FC;&#x95A2;&#x6570;&#x3002;
+&#x4ECA;&#x56DE;&#x306F;<code>count</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3067;<code>countStore</code>&#x304C;&#x6301;&#x3064;&#x72B6;&#x614B;&#x3092;&#x53C2;&#x7167;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+&#x3053;&#x3053;&#x3067;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x72B6;&#x614B;&#x306F;<code>Container.createFunctional</code>&#x306B;&#x6E21;&#x3055;&#x308C;&#x308B;&#x30D3;&#x30E5;&#x30FC;&#xFF08;&#x3053;&#x3053;&#x3067;&#x306F;<code>App</code>&#xFF09;&#x306E;<code>props</code>&#xFF08;&#x3064;&#x307E;&#x308A;&#x30A2;&#x30ED;&#x30FC;&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;&#xFF09;&#x3068;&#x3057;&#x3066;&#x6E21;&#x3055;&#x308C;&#x308B;&#x3002;</p>
+<p>&#x6700;&#x5F8C;&#x306B;<code>src/index.js</code>&#x306E;&#x5168;&#x4F53;&#x3092;&#x63B2;&#x8F09;&#x3057;&#x3066;&#x304A;&#x304F;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { increment } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actions&apos;</span>;
+<span class="hljs-keyword">import</span> { Container } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;flux/utils&apos;</span>;
+<span class="hljs-keyword">import</span> { countStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store&apos;</span>;
+
+<span class="hljs-keyword">const</span> Counter = ({ count }) =&gt; (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{count}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>);
+
+<span class="hljs-keyword">const</span> IncButon = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{increment}</span>&gt;</span>+1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+
+<span class="hljs-keyword">const</span> App = ({ count }) =&gt; (
+    &lt;div&gt;
+        &lt;Counter count={count} /&gt;
+        &lt;IncButon /&gt;
+    &lt;/div&gt;
+);
+
+const getStores = () =&gt; [countStore];
+
+const calculateState = () =&gt; {
+    return { count: countStore.getState() };
+};
+
+const AppContainer = Container.createFunctional(App, getStores, calculateState)
+
+ReactDOM.render(&lt;AppContainer /&gt;, document.getElementById(&apos;root&apos;));
+</code></pre>
+<h2 id="&#x30AB;&#x30A6;&#x30F3;&#x30BF;&#x30FC;&#x5B8C;&#x6210;&#xFF06;&#x8AB2;&#x984C;">&#x30AB;&#x30A6;&#x30F3;&#x30BF;&#x30FC;&#x5B8C;&#x6210;&#xFF06;&#x8AB2;&#x984C;</h2>
+<p>&#x4EE5;&#x4E0A;&#x306E;&#x624B;&#x9806;&#x3092;&#x3053;&#x306A;&#x305B;&#x3070;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x3059;&#x3068;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;&#x3059;&#x308B;&#x3082;&#x306E;&#x304C;&#x51FA;&#x6765;&#x305F;&#x3068;&#x601D;&#x3046;&#x3002;</p>
+<p>&#x3053;&#x3053;&#x3067;&#x3044;&#x304F;&#x3064;&#x304B;&#x8AB2;&#x984C;&#x3092;&#x51FA;&#x305D;&#x3046;&#x3002;</p>
+<ul>
+<li>&#x62BC;&#x3059;&#x3068;&#x5024;&#x3092;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x30C0;&#x30A6;&#x30F3;&#xFF08;&#x30C7;&#x30AF;&#x30EA;&#x30E1;&#x30F3;&#x30C8;&#xFF09;&#x3059;&#x308B;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</li>
+<li>&#x62BC;&#x3059;&#x3068;&#x5024;&#x3092;<code>0</code>&#x306B;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x3059;&#x308B;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</li>
+<li>&#x3069;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x306E;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x547C;&#x3073;&#x51FA;&#x3055;&#x308C;&#x305F;&#x306E;&#x304B;&#x3092;&#x6301;&#x3064;<code>Store</code>&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x3001;&#x753B;&#x9762;&#x306B;&#x5C65;&#x6B74;&#x8868;&#x793A;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</li>
+<li><code>todolist</code>&#x306B;Flux&#x3092;&#x7D44;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x307F;&#x3088;&#x3046;</li>
+</ul>
+<p>&#x306A;&#x304A;&#x3001;<code>todolist</code>&#x306E;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x30B3;&#x30FC;&#x30C9;&#x306B;&#x306F;Flux&#x3092;&#x7D44;&#x307F;&#x8FBC;&#x3093;&#x3060;&#x3082;&#x306E;&#x304C;&#x65E2;&#x306B;&#x3042;&#x308B;&#x306E;&#x3067;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x307F;&#x3066;&#x306D;&#x3002;</p>
+<p><a href="https://github.com/team-cerezo/react-sample/tree/flux" target="_blank">https://github.com/team-cerezo/react-sample/tree/flux</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="refactor-store.html" class="navigation navigation-prev " aria-label="Previous page: データを整理する">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="router.html" class="navigation navigation-next " aria-label="Next page: React Routerを使う">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Fluxを使う","level":"1.10","depth":1,"next":{"title":"React Routerを使う","level":"1.11","depth":1,"path":"router.md","ref":"router.md","articles":[]},"previous":{"title":"データを整理する","level":"1.9","depth":1,"path":"refactor-store.md","ref":"refactor-store.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"flux.md","mtime":"2018-03-19T00:34:36.385Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-20T06:12:43.569Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

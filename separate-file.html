@@ -1,0 +1,657 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ファイルも分割する · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="refactor-store.html" />
+    
+    
+    <link rel="prev" href="separate-component.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="setup.html">
+            
+                <a href="setup.html">
+            
+                    
+                    環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="es2015.html">
+            
+                <a href="es2015.html">
+            
+                    
+                    JavaScript(ES2015)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="create-project.html">
+            
+                <a href="create-project.html">
+            
+                    
+                    プロジェクトを作る
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="helloworld.html">
+            
+                <a href="helloworld.html">
+            
+                    
+                    Hello, world!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="coding-roughly.html">
+            
+                <a href="coding-roughly.html">
+            
+                    
+                    とりあえずざくっと書いてみる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="separate-component.html">
+            
+                <a href="separate-component.html">
+            
+                    
+                    コンポーネントを分割する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="separate-file.html">
+            
+                <a href="separate-file.html">
+            
+                    
+                    ファイルも分割する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="refactor-store.html">
+            
+                <a href="refactor-store.html">
+            
+                    
+                    データを整理する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="flux.html">
+            
+                <a href="flux.html">
+            
+                    
+                    Fluxを使う
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="router.html">
+            
+                <a href="router.html">
+            
+                    
+                    React Routerを使う
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="rest-api.html">
+            
+                <a href="rest-api.html">
+            
+                    
+                    REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="cheat-sheet.html">
+            
+                <a href="cheat-sheet.html">
+            
+                    
+                    チートシート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="reference.html">
+            
+                <a href="reference.html">
+            
+                    
+                    参考になるウェブサイトなど
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ファイルも分割する</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3082;&#x5206;&#x5272;&#x3059;&#x308B;">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3082;&#x5206;&#x5272;&#x3059;&#x308B;</h1>
+<p>&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x5206;&#x5272;&#x3057;&#x305F;&#x306E;&#x3067;&#x3001;&#x6B21;&#x306F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3082;&#x5206;&#x5272;&#x3057;&#x3088;&#x3046;&#x3002;
+&#x3053;&#x3053;&#x3067;&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x5358;&#x4F4D;&#x3067;&#x5206;&#x5272;&#x3059;&#x308B;&#x3002;</p>
+<ul>
+<li>&#x30E2;&#x30C7;&#x30EB;&#xFF08;<code>Todo</code>&#x30AF;&#x30E9;&#x30B9;&#x3001;<code>TodoList</code>&#x30AF;&#x30E9;&#x30B9;&#xFF09;</li>
+<li>&#x30C7;&#x30FC;&#x30BF;&#xFF08;<code>content</code>&#x3001;<code>todoList</code>&#xFF09;</li>
+<li>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#xFF08;<code>updateContent</code>, <code>tryAddTodo</code>, <code>updateStatus</code>, <code>clear</code>&#xFF09;</li>
+<li>&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#xFF08;<code>InputContent</code>, <code>TodoComponent</code>, <code>TodoListComponent</code>, <code>ClearButton</code>&#xFF09;</li>
+<li>&#x69CB;&#x9020;&#x5316;&#x3059;&#x308B;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#xFF08;<code>App</code>&#xFF09;</li>
+<li>&#x63CF;&#x753B;&#x95A2;&#x6570;&#xFF08;<code>render</code>&#xFF09;</li>
+</ul>
+<h2 id="&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;">&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;</h2>
+<p><code>Todo</code>&#x30AF;&#x30E9;&#x30B9;&#x3082;<code>TodoList</code>&#x30AF;&#x30E9;&#x30B9;&#x3082;&#x4ED6;&#x306E;&#x5358;&#x4F4D;&#x3078;&#x306E;&#x4F9D;&#x5B58;&#x304C;&#x306A;&#x3044;&#xFF08;&#x3064;&#x307E;&#x308A;&#x3001;&#x30E2;&#x30C7;&#x30EB;&#x306F;&#x30C7;&#x30FC;&#x30BF;&#x3084;&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30FB;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3078;&#x4F9D;&#x5B58;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3001;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#xFF09;&#x306E;&#x3067;&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x5206;&#x5272;&#x3059;&#x308B;&#x306E;&#x306F;&#x7C21;&#x5358;&#x3060;&#x3002;</p>
+<p>&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;<code>src/models.js</code>&#x306B;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> </span>{
+    <span class="hljs-keyword">constructor</span>(id, content, done) {
+        <span class="hljs-keyword">this</span>.id = id;
+        <span class="hljs-keyword">this</span>.content = content;
+        <span class="hljs-keyword">this</span>.done = done;
+    }
+    setDone(done) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Todo(<span class="hljs-keyword">this</span>.id, <span class="hljs-keyword">this</span>.content, done);
+    }
+    <span class="hljs-keyword">static</span> idGenerator = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">static</span> create(content) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Todo(++Todo.idGenerator, content, <span class="hljs-literal">false</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoList</span> </span>{
+    <span class="hljs-keyword">constructor</span>(list) {
+        <span class="hljs-keyword">this</span>.list = list;
+    }
+    <span class="hljs-keyword">static</span> empty() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TodoList([]);
+    }
+    add(todo) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TodoList([todo, ...this.list]);
+    }
+    setDone(id, done) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TodoList(<span class="hljs-keyword">this</span>.list.map(todo =&gt; {
+            <span class="hljs-keyword">if</span> (todo.id === id) {
+                <span class="hljs-keyword">return</span> todo.setDone(done);
+            }
+            <span class="hljs-keyword">return</span> todo;
+        }));
+    }
+    clear() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TodoList(<span class="hljs-keyword">this</span>.list.filter(todo =&gt; todo.done === <span class="hljs-literal">false</span>));
+    }
+}
+
+<span class="hljs-keyword">export</span> { Todo, TodoList };
+</code></pre>
+<p>&#x30AF;&#x30E9;&#x30B9;&#x5B9A;&#x7FA9;&#x306F;<code>src/index.js</code>&#x304B;&#x3089;&#x305D;&#x306E;&#x307E;&#x307E;&#x6301;&#x3063;&#x3066;&#x304D;&#x305F;&#x3002;</p>
+<p>&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30B3;&#x30FC;&#x30C9;&#x306F;&#x6700;&#x7D42;&#x884C;&#x3060;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> { Todo, TodoList };
+</code></pre>
+<p>&#x3053;&#x308C;&#x306F;<code>Todo</code>&#x30AF;&#x30E9;&#x30B9;&#x3068;<code>TodoList</code>&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x4ED6;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x3082;&#x4F7F;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3060;&#x3002;</p>
+<p><code>src/index.js</code>&#x304B;&#x3089;&#x306F;<code>Todo</code>&#x30AF;&#x30E9;&#x30B9;&#x3068;<code>TodoList</code>&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3044;&#x305F;&#x30B3;&#x30FC;&#x30C9;&#x304C;&#x306A;&#x304F;&#x306A;&#x308A;&#x3001;&#x4EE3;&#x308F;&#x308A;&#x306B;<code>import</code>&#x304C;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Todo, TodoList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./models&apos;</span>;
+</code></pre>
+<h2 id="&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;">&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;</h2>
+<p>&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x5206;&#x5272;&#x306F;&#x5C11;&#x3057;&#x3060;&#x3051;&#x9762;&#x5012;&#x3060;&#x3002;</p>
+<p>&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;<code>src/store.js</code>&#x306B;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Todo, TodoList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./models&apos;</span>;
+
+<span class="hljs-keyword">let</span> todoList = TodoList.empty()
+    .add(Todo.create(<span class="hljs-string">&apos;&#x74B0;&#x5883;&#x69CB;&#x7BC9;&apos;</span>).setDone(<span class="hljs-literal">true</span>))
+    .add(Todo.create(<span class="hljs-string">&apos;JavaScript&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&apos;</span>))
+    .add(Todo.create(<span class="hljs-string">&apos;React&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&apos;</span>));
+
+<span class="hljs-keyword">let</span> content = <span class="hljs-string">&apos;&apos;</span>;
+
+<span class="hljs-keyword">const</span> store = { todoList, content };
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<p>&#x30C7;&#x30FC;&#x30BF;&#x306F;<code>Todo</code>&#x30AF;&#x30E9;&#x30B9;&#x3068;<code>TodoList</code>&#x30AF;&#x30E9;&#x30B9;&#x306B;&#x4F9D;&#x5B58;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;<code>src/model.js</code>&#x3092;<code>import</code>&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+&#x305D;&#x308C;&#x304B;&#x3089;<code>todoList</code>&#x3068;<code>content</code>&#x3092;1&#x3064;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x307E;&#x3068;&#x3081;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;&#x3001;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x30EA;&#x30C6;&#x30E9;&#x30EB;&#x306F;&#x30AD;&#x30FC;&#x3068;&#x5024;&#x306E;&#x30DA;&#x30A2;&#x3092;<code>,</code>&#x3067;&#x533A;&#x5207;&#x3063;&#x3066;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x3060;&#x3051;&#x3069;&#x3001;&#x30AD;&#x30FC;&#x3092;&#x7701;&#x7565;&#x3059;&#x308B;&#x3068;&#x5024;&#x304C;&#x4EE3;&#x5165;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5909;&#x6570;&#x306E;&#x540D;&#x524D;&#x3092;&#x30AD;&#x30FC;&#x3068;&#x307F;&#x306A;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;&#x3002;
+&#x3064;&#x307E;&#x308A;&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306F;&#x3001;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> store = { todoList, content };
+</code></pre>
+<p>&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3068;&#x7B49;&#x4FA1;&#x3060;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> store = { todoList: todoList, content: content };
+</code></pre>
+<p>&#x3053;&#x306E;<code>store</code>&#x3092;<code>export</code>&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<p>&#x5909;&#x6570;<code>content</code>&#x3068;&#x5909;&#x6570;<code>todoList</code>&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x3044;&#x305F;&#x7B87;&#x6240;&#x306F;<code>store.</code>&#x3092;&#x4ED8;&#x3051;&#x308B;&#x3088;&#x3046;&#x306B;&#x4FEE;&#x6B63;&#x3059;&#x308B;&#x3002;</p>
+<h3 id="export&#x3068;export-default">export&#x3068;export default</h3>
+<p><code>store</code>&#x306E;<code>export</code>&#x306B;&#x306F;<code>Todo</code>&#x30AF;&#x30E9;&#x30B9;&#x3068;<code>TodoList</code>&#x30AF;&#x30E9;&#x30B9;&#x306E;<code>export</code>&#x306E;&#x3068;&#x304D;&#x306B;&#x306F;&#x306A;&#x304B;&#x3063;&#x305F;<code>default</code>&#x3068;&#x3044;&#x3046;&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x4ED8;&#x3044;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<p><code>default</code>&#x304C;&#x4ED8;&#x3044;&#x3066;&#x3044;&#x308B;&#x307B;&#x3046;&#x3092;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3001;<code>default</code>&#x304C;&#x4ED8;&#x3044;&#x3066;&#x3044;&#x306A;&#x3044;&#x307B;&#x3046;&#x3092;&#x540D;&#x524D;&#x4ED8;&#x304D;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3068;&#x547C;&#x3076;&#x3002;</p>
+<p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x306F;1&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x3064;&#x304D;1&#x3064;&#x306E;&#x5024;&#x306E;&#x307F;<code>export</code>&#x3067;&#x304D;&#x308B;&#x3002;
+<code>import</code>&#x3059;&#x308B;&#x3068;&#x304D;&#x306F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308C;&#x3070;&#x3088;&#x3044;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-string">&apos;hello world&apos;</span>;
+
+<span class="hljs-keyword">import</span> Greeting <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./hello&apos;</span>;
+</code></pre>
+<p>&#x540D;&#x524D;&#x4ED8;&#x304D;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x306F;1&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x3064;&#x304D;&#x8907;&#x6570;&#x306E;&#x5024;&#x3092;<code>export</code>&#x3067;&#x304D;&#x308B;&#x3002;
+<code>import</code>&#x3059;&#x308B;&#x3068;&#x304D;&#x306F;&#x540D;&#x524D;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x306A;&#x3051;&#x308C;&#x3070;&#x3044;&#x3051;&#x306A;&#x3044;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> foo = <span class="hljs-string">&apos;FOO&apos;</span>;
+<span class="hljs-keyword">const</span> bar = <span class="hljs-number">12345</span>;
+<span class="hljs-keyword">export</span> { foo, bar };
+<span class="hljs-comment">//&#x5BA3;&#x8A00;&#x3068;&#x540C;&#x6642;&#x306B;export&#x3067;&#x304D;&#x308B;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> baz = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">import</span> { foo, bar, baz } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./foobar&apos;</span>;
+</code></pre>
+<h2 id="&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;">&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;</h2>
+<p>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306F;&#x518D;&#x63CF;&#x753B;&#x306E;&#x305F;&#x3081;&#x306B;<code>render</code>&#x95A2;&#x6570;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3002;
+&#x3064;&#x307E;&#x308A;<code>render</code>&#x95A2;&#x6570;&#x3092;&#x6E21;&#x3055;&#x306A;&#x3044;&#x3068;&#x3044;&#x3051;&#x306A;&#x3044;&#x3002;</p>
+<p>&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;<code>src/actions.js</code>&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Todo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./models&apos;</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store&apos;</span>;
+
+<span class="hljs-keyword">let</span> render;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> updateContent = event =&gt; {
+    store.content = event.target.value;
+    render();
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> tryAddTodo = event =&gt; {
+    <span class="hljs-keyword">if</span> (store.content !== <span class="hljs-string">&apos;&apos;</span> &amp;&amp; event.key === <span class="hljs-string">&apos;Enter&apos;</span>) {
+        <span class="hljs-keyword">const</span> todo = Todo.create(store.content);
+        store.todoList = store.todoList.add(todo);
+        store.content = <span class="hljs-string">&apos;&apos;</span>;
+        render();
+    }
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> updateStatus = (id, done) =&gt; {
+    store.todoList = store.todoList.setDone(id, done);
+    render();
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> clear = event =&gt; {
+    store.todoList = store.todoList.clear();
+    render();
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (h) =&gt; {
+  render = h;
+};
+</code></pre>
+<p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x3044;&#x308B;&#x95A2;&#x6570;&#x304C;<code>render</code>&#x95A2;&#x6570;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x3082;&#x306E;&#x3060;&#x3002;</p>
+<p>&#x30A2;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x4F7F;&#x3046;&#x5074;&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;<code>import</code>&#x3057;&#x305F;&#x5F8C;&#x306B;&#x3001;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> initRender, { updateContent, tryAddTodo, updateStatus, clear } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actions&apos;</span>;
+</code></pre>
+<p><code>render</code>&#x95A2;&#x6570;&#x3092;&#x6E21;&#x3059;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x3002;</p>
+<pre><code class="lang-js">initRender(render);
+</code></pre>
+<h3 id="&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;">&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;</h3>
+<p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5206;&#x5272;&#x3082;&#x304B;&#x306A;&#x308A;&#x9032;&#x3093;&#x3067;&#x304D;&#x305F;&#x3002;
+&#x6B21;&#x306F;&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#xFF08;&#x3064;&#x307E;&#x308A;<code>App</code>&#x4EE5;&#x5916;&#x306E;&#x3082;&#x306E;&#xFF09;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;&#x3002;</p>
+<p>&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;<code>src/components.js</code>&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> InputContent = (props) =&gt; {
+    <span class="hljs-keyword">const</span> content = props.content;
+    <span class="hljs-keyword">const</span> updateContent = props.updateContent;
+    <span class="hljs-keyword">const</span> tryAddTodo = props.tryAddTodo;
+    <span class="hljs-keyword">return</span> (
+        &lt;p&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;&#x3084;&#x308B;&#x3053;&#x3068;&#x3042;&#x308B;&#xFF1F;&quot; value={content}
+                onChange={updateContent} onKeyPress={tryAddTodo} /&gt;
+        &lt;/p&gt;
+    );
+};
+
+export const TodoComponent = (props) =&gt; {
+    const todo = props.todo;
+    const updateStatus = props.updateStatus;
+    return (
+        &lt;li&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; checked={todo.done}
+                    onChange={event =&gt; updateStatus(todo.id, event.target.checked)} /&gt;
+                &lt;span&gt;#{todo.id} {todo.content}&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/li&gt;
+    );
+};
+
+export const TodoListComponent = (props) =&gt; (
+    &lt;ul&gt;
+        {props.children}
+    &lt;/ul&gt;
+);
+
+export const ClearButton = (props) =&gt; (
+    &lt;p&gt;
+        &lt;button onClick={props.clear}&gt;&#x7D42;&#x308F;&#x3063;&#x305F;&#x3084;&#x3064;&#x6D88;&#x3059;&lt;/button&gt;
+    &lt;/p&gt;
+);
+</code></pre>
+<h2 id="&#x69CB;&#x9020;&#x5316;&#x3059;&#x308B;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;">&#x69CB;&#x9020;&#x5316;&#x3059;&#x308B;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x5206;&#x5272;&#x3059;&#x308B;</h2>
+<p>&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x5206;&#x5272;&#x3067;&#x304D;&#x305F;&#x3089;&#x6B21;&#x306F;&#x69CB;&#x9020;&#x5316;&#x3059;&#x308B;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3060;&#x3002;</p>
+<p>&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;<code>src/component-structure.js</code>&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store&apos;</span>;
+<span class="hljs-keyword">import</span> { updateContent, tryAddTodo, updateStatus, clear } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actions&apos;</span>;
+<span class="hljs-keyword">import</span> { InputContent, TodoListComponent, TodoComponent, ClearButton } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    &lt;div&gt;
+        &lt;h1&gt;&#x3084;&#x308B;&#x3053;&#x3068;&lt;/h1&gt;
+        &lt;InputContent
+            content={store.content}
+            updateContent={updateContent}
+            tryAddTodo={tryAddTodo} /&gt;
+        &lt;TodoListComponent&gt;
+            {store.todoList.list.map(todo =&gt; (
+                &lt;TodoComponent
+                    key={todo.id}
+                    todo={todo}
+                    updateStatus={updateStatus} /&gt;
+            ))}
+        &lt;/TodoListComponent&gt;
+        &lt;ClearButton clear={clear} /&gt;
+    &lt;/div&gt;
+);
+
+export default App;
+</code></pre>
+<h2 id="&#x63CF;&#x753B;&#x95A2;&#x6570;">&#x63CF;&#x753B;&#x95A2;&#x6570;</h2>
+<p>&#x6700;&#x5F8C;&#x306B;&#x63CF;&#x753B;&#x95A2;&#x6570;&#x307E;&#x308F;&#x308A;&#x3092;&#x6574;&#x3048;&#x3088;&#x3046;&#x3002;</p>
+<p>&#x6B21;&#x306E;&#x5185;&#x5BB9;&#x3092;<code>src/index.js</code>&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+
+<span class="hljs-keyword">import</span> initRender <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actions&apos;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./component-structure&apos;</span>;
+
+<span class="hljs-keyword">const</span> render = () =&gt; {
+    ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>, document.getElementById(&apos;root&apos;));
+};
+
+initRender(render);
+
+render();
+</span></code></pre>
+<p><a href="https://github.com/team-cerezo/react-sample/tree/files" target="_blank">https://github.com/team-cerezo/react-sample/tree/files</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="separate-component.html" class="navigation navigation-prev " aria-label="Previous page: コンポーネントを分割する">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="refactor-store.html" class="navigation navigation-next " aria-label="Next page: データを整理する">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ファイルも分割する","level":"1.8","depth":1,"next":{"title":"データを整理する","level":"1.9","depth":1,"path":"refactor-store.md","ref":"refactor-store.md","articles":[]},"previous":{"title":"コンポーネントを分割する","level":"1.7","depth":1,"path":"separate-component.md","ref":"separate-component.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"separate-file.md","mtime":"2018-02-22T01:18:57.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-20T06:12:43.569Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
