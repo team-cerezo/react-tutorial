@@ -31,15 +31,8 @@ Reactから`create-react-app`というコマンドが提供されており、こ
 そもそも「npmとかyarnってなんなんだ」という話だけど、npmはNode.jsに付属しているパッケージマネージャ、つまりライブラリの依存関係を解決してくれるもので、Javaに例えるとMavenのようなもの。
 それからyarnはnpmレジストリを使用するnpmとは別のパッケージマネージャで、yarnとnpmの関係はJavaに例えるとMavenとGradleの関係に近い。
 
-さて、最後に`create-react-app`をインストールしよう。
-`create-react-app`は`npm install`でインストールする。
-プロジェクトを作るためのコマンドとして使うので`-g`オプションをつけてグローバルな環境にインストールする。
-
-**create-react-appのインストール**
-
-```console
-npm install -g create-react-app
-```
+さて、最後は`create-react-app`だけど、これは明示的にはインストールしない。
+[npm 5.2.0から追加された`npx`というコマンド](https://github.com/npm/npm/releases/tag/v5.2.0)を介して`create-react-app`を実行するので明示的なインストールは不要になった。
 
 ## Chrome
 

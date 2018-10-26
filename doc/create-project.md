@@ -4,7 +4,7 @@
 プロジェクトの名前を引数にしてコマンドを実行する。
 
 ```console
-create-react-app todolist
+npx create-react-app todolist
 ```
 
 コマンドの実行が終わると`todolist`というディレクトリができているので、`cd todolist`を実行してカレントディレクトリを移動しよう。
